@@ -146,7 +146,7 @@ class Document extends GreenInvoice
      *
      * @var array
      */
-    protected $linkedDocumentIds;
+    protected $linkedDocumentIds = [];
 
     /**
      * Linked payment ID (valid for document type 305 only).
@@ -310,6 +310,26 @@ class Document extends GreenInvoice
     public function setPayment(Payment $payment)
     {
         array_push($this->payment, $payment->toArray());
+    }
+
+    /**
+     * Sets linked document IDs
+     *
+     * @param string $id
+     */
+    public function setLinkedDocumentIds(String $id)
+    {
+        array_push($this->linkedDocumentIds, $id);
+    }
+
+    /**
+     * Sets reference type.
+     *
+     * @param string $linkType
+     */
+    public function setLinkType(String $linkType)
+    {
+        $this->linkType = $linkType;
     }
 
     public function get()
