@@ -38,7 +38,7 @@ class GreenInvoice
      */
     public static $token;
 
-    public function __construct($sandbox = fale)
+    public function __construct($sandbox = false)
     {
         self::$apiBase = $sandbox ? self::$sandboxBase : self::$apiBase;
     }

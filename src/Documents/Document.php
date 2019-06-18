@@ -164,7 +164,7 @@ class Document extends GreenInvoice
      */
     protected $linkType;
 
-    public function __construct(Int $type, String $lang = 'he', String $currency = 'ILS', Bool $sandbox = fale)
+    public function __construct(Int $type, String $lang = 'he', String $currency = 'ILS', Bool $sandbox = false)
     {
         parent::__construct($sandbox);
 

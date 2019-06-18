@@ -29,7 +29,7 @@ class Token extends GreenInvoice
      */
     public static $secret;
 
-    public function __construct($sandbox = fale)
+    public function __construct($sandbox = false)
     {
         parent::__construct($sandbox);
     }

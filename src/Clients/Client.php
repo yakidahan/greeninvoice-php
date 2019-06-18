@@ -160,7 +160,7 @@ class Client extends GreenInvoice
      */
     protected $labels = [];
 
-    public function __construct(String $name, Bool $sandbox = fale)
+    public function __construct(String $name, Bool $sandbox = false)
     {
         parent::__construct($sandbox);
 
