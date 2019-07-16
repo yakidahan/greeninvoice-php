@@ -116,7 +116,7 @@ class Payment
      */
     protected $firstPayment;
 
-    public function __construct(Int $type, Float $price, String $currency = 'ILS', String $date = null)
+    public function __construct(int $type, float $price, string $currency = 'ILS', string $date = null)
     {
         $this->date = $date ?: date('Y-m-d');
         $this->type = $type;
@@ -129,7 +129,7 @@ class Payment
      *
      * @param string $cardType
      */
-    public function setCardType(String $cardType)
+    public function setCardType(string $cardType)
     {
         $this->cardType = $cardType;
     }
@@ -139,7 +139,7 @@ class Payment
      *
      * @param string $cardNum
      */
-    public function setCardNum(String $cardNum)
+    public function setCardNum(string $cardNum)
     {
         $this->cardNum = $cardNum;
     }
@@ -149,7 +149,7 @@ class Payment
      *
      * @param int $dealType
      */
-    public function setDealType(Int $dealType)
+    public function setDealType(int $dealType)
     {
         $this->dealType = $dealType;
     }
@@ -159,7 +159,7 @@ class Payment
      *
      * @param int $numPayments
      */
-    public function setNumPayments(Int $numPayments)
+    public function setNumPayments(int $numPayments)
     {
         $this->numPayments = $numPayments;
     }
@@ -169,7 +169,7 @@ class Payment
      *
      * @param float $firstPayment
      */
-    public function setFirstPayment(Float $firstPayment)
+    public function setFirstPayment(float $firstPayment)
     {
         $this->firstPayment = $firstPayment;
     }

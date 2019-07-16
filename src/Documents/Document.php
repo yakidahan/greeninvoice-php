@@ -129,7 +129,7 @@ class Document extends GreenInvoice
      *
      * @var array
      */
-    protected $income;
+    protected $income = [];
 
     /**
      * Payment rows.
@@ -164,7 +164,7 @@ class Document extends GreenInvoice
      */
     protected $linkType;
 
-    public function __construct(Int $type, String $lang = 'he', String $currency = 'ILS', Bool $sandbox = false)
+    public function __construct(int $type, string $lang = 'he', string $currency = 'ILS', bool $sandbox = false)
     {
         parent::__construct($sandbox);
 
@@ -178,7 +178,7 @@ class Document extends GreenInvoice
      *
      * @param string $description
      */
-    public function setDescription(String $description)
+    public function setDescription(string $description)
     {
         $this->description = $description;
     }
@@ -188,7 +188,7 @@ class Document extends GreenInvoice
      *
      * @param string $remarks
      */
-    public function setRemarks(String $remarks)
+    public function setRemarks(string $remarks)
     {
         $this->remarks = $remarks;
     }
@@ -198,7 +198,7 @@ class Document extends GreenInvoice
      *
      * @param string $footer
      */
-    public function setFooter(String $footer)
+    public function setFooter(string $footer)
     {
         $this->footer = $footer;
     }
@@ -208,7 +208,7 @@ class Document extends GreenInvoice
      *
      * @param string $emailContent
      */
-    public function setEmailContent(String $emailContent)
+    public function setEmailContent(string $emailContent)
     {
         $this->emailContent = $emailContent;
     }
@@ -218,7 +218,7 @@ class Document extends GreenInvoice
      *
      * @param string $date
      */
-    public function setDate(String $date)
+    public function setDate(string $date)
     {
         $this->date = $date;
     }
@@ -228,7 +228,7 @@ class Document extends GreenInvoice
      *
      * @param string $dueDate
      */
-    public function setDueDate(String $dueDate)
+    public function setDueDate(string $dueDate)
     {
         $this->dueDate = $dueDate;
     }
@@ -238,7 +238,7 @@ class Document extends GreenInvoice
      *
      * @param int $vatType
      */
-    public function setVatType(Int $vatType)
+    public function setVatType(int $vatType)
     {
         $this->vatType = $vatType;
     }
@@ -249,7 +249,7 @@ class Document extends GreenInvoice
      * @param float $amount
      * @param string $type
      */
-    public function setDiscount(Float $amount, String $type = 'sum')
+    public function setDiscount(float $amount, string $type = 'sum')
     {
         $this->discount = [
             'amount' => $amount,
@@ -262,7 +262,7 @@ class Document extends GreenInvoice
      *
      * @param bool $rounding
      */
-    public function setRounding(Bool $rounding)
+    public function setRounding(bool $rounding)
     {
         $this->rounding = $rounding;
     }
@@ -272,7 +272,7 @@ class Document extends GreenInvoice
      *
      * @param bool $signed
      */
-    public function setSigned(Bool $signed)
+    public function setSigned(bool $signed)
     {
         $this->signed = $signed;
     }
@@ -282,7 +282,7 @@ class Document extends GreenInvoice
      *
      * @param bool $attachment
      */
-    public function setAttachment(Bool $attachment)
+    public function setAttachment(bool $attachment)
     {
         $this->attachment = $attachment;
     }
@@ -294,7 +294,7 @@ class Document extends GreenInvoice
      * @param bool $add
      * @param bool $self
      */
-    public function setClient(Client $client, Bool $add = false, Bool $self = false)
+    public function setClient(Client $client, bool $add = false, bool $self = false)
     {
         $this->client = array_merge($client->toArray(), [
             'add' => $add,
@@ -313,11 +313,21 @@ class Document extends GreenInvoice
     }
 
     /**
+     * Sets income row
+     *
+     * @param array $income
+     */
+    public function setIncome(array $income)
+    {
+        array_push($this->income, $income);
+    }
+
+    /**
      * Sets linked document IDs
      *
      * @param string $id
      */
-    public function setLinkedDocumentIds(String $id)
+    public function setLinkedDocumentIds(string $id)
     {
         array_push($this->linkedDocumentIds, $id);
     }
@@ -327,7 +337,7 @@ class Document extends GreenInvoice
      *
      * @param string $linkType
      */
-    public function setLinkType(String $linkType)
+    public function setLinkType(string $linkType)
     {
         $this->linkType = $linkType;
     }

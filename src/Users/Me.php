@@ -15,7 +15,7 @@ class Me extends GreenInvoice
      */
     protected $endpoint = '/users/me';
 
-    public function __construct(Bool $sandbox = false)
+    public function __construct(bool $sandbox = false)
     {
         parent::__construct($sandbox);
     }

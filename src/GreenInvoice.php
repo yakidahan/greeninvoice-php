@@ -38,7 +38,7 @@ class GreenInvoice
      */
     public static $token;
 
-    public function __construct($sandbox = false)
+    public function __construct(bool $sandbox = false)
     {
         self::$apiBase = $sandbox ? self::$sandboxBase : self::$apiBase;
     }
@@ -84,7 +84,7 @@ class GreenInvoice
                 'json' => $body,
             ]);
         } catch (RequestException $e) {
-            $response = $e->getResponse();
+            return $e->getResponse();
         }
 
         return json_decode($response->getBody(), 1);

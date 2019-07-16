@@ -29,7 +29,7 @@ class Token extends GreenInvoice
      */
     public static $secret;
 
-    public function __construct($sandbox = false)
+    public function __construct(bool $sandbox = false)
     {
         parent::__construct($sandbox);
     }
@@ -39,7 +39,7 @@ class Token extends GreenInvoice
      *
      * @param string $apiKey
      */
-    public static function setApiKey($apiKey)
+    public static function setApiKey(string $apiKey)
     {
         self::$apiKey = $apiKey;
     }
@@ -49,7 +49,7 @@ class Token extends GreenInvoice
      *
      * @param string $secret
      */
-    public static function setSecret($secret)
+    public static function setSecret(string $secret)
     {
         self::$secret = $secret;
     }
@@ -70,7 +70,7 @@ class Token extends GreenInvoice
                 ],
             ]);
         } catch (RequestException $e) {
-            $response = $e->getResponse();
+            return $e->getResponse();
         }
 
         return json_decode($response->getBody(), 1);

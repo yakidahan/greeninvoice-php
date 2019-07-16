@@ -160,7 +160,7 @@ class Client extends GreenInvoice
      */
     protected $labels = [];
 
-    public function __construct(String $name, Bool $sandbox = false)
+    public function __construct(string $name, bool $sandbox = false)
     {
         parent::__construct($sandbox);
 
@@ -172,7 +172,7 @@ class Client extends GreenInvoice
      *
      * @param string $country
      */
-    public function setCountry(String $country)
+    public function setCountry(string $country)
     {
         $this->country = $country;
     }
@@ -182,7 +182,7 @@ class Client extends GreenInvoice
      *
      * @param string $email
      */
-    public function setEmail(String $email)
+    public function setEmail(string $email)
     {
         array_push($this->emails, $email);
     }
