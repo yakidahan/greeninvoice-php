@@ -84,7 +84,7 @@ class GreenInvoice
                 'json' => $body,
             ]);
         } catch (RequestException $e) {
-            return $e->getResponse();
+            $response = $e->getResponse();
         }
 
         return json_decode($response->getBody(), 1);

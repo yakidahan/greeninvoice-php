@@ -2,9 +2,7 @@
 
 namespace Yadahan\GreenInvoice\Users;
 
-use GuzzleHttp\Client;
 use Yadahan\GreenInvoice\GreenInvoice;
-use GuzzleHttp\Exception\RequestException;
 
 class Me extends GreenInvoice
 {

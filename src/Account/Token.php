@@ -70,7 +70,7 @@ class Token extends GreenInvoice
                 ],
             ]);
         } catch (RequestException $e) {
-            return $e->getResponse();
+            $response = $e->getResponse();
         }
 
         return json_decode($response->getBody(), 1);
