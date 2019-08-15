@@ -125,6 +125,76 @@ class Payment
     }
 
     /**
+     * Sets the currency rate.
+     *
+     * @param float $currencyRate
+     */
+    public function setCurrencyRate(float $currencyRate)
+    {
+        $this->currencyRate = $currencyRate;
+    }
+
+    /**
+     * Sets the bank name.
+     *
+     * @param string $bankName
+     */
+    public function setBankName(string $bankName)
+    {
+        $this->bankName = $bankName;
+    }
+
+    /**
+     * Sets the bank branch.
+     *
+     * @param string $bankBranch
+     */
+    public function setBankBranch(string $bankBranch)
+    {
+        $this->bankBranch = $bankBranch;
+    }
+
+    /**
+     * Sets the bank account.
+     *
+     * @param string $bankAccount
+     */
+    public function setBankAccount(string $bankAccount)
+    {
+        $this->bankAccount = $bankAccount;
+    }
+
+    /**
+     * Sets the cheque num.
+     *
+     * @param string $chequeNum
+     */
+    public function setChequeNum(string $chequeNum)
+    {
+        $this->chequeNum = $chequeNum;
+    }
+
+    /**
+     * Sets the account id.
+     *
+     * @param string $accountId
+     */
+    public function setAccountId(string $accountId)
+    {
+        $this->accountId = $accountId;
+    }
+
+    /**
+     * Sets the transaction id.
+     *
+     * @param string $transactionId
+     */
+    public function setTransactionId(string $transactionId)
+    {
+        $this->transactionId = $transactionId;
+    }
+
+    /**
      * Sets the credit card type.
      *
      * @param string $cardType
