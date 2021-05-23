@@ -7,6 +7,13 @@ use Yadahan\GreenInvoice\GreenInvoice;
 class Client extends GreenInvoice
 {
     /**
+     * The client id.
+     *
+     * @var string
+     */
+    protected $id;
+
+    /**
      * The client name.
      *
      * @var string
@@ -168,6 +175,26 @@ class Client extends GreenInvoice
     }
 
     /**
+     * Sets the client id
+     *
+     * @param string $id
+     */
+    public function id(string $id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * Sets the client accounting key
+     *
+     * @param string $accountingKey
+     */
+    public function setAccountingKey(string $accountingKey)
+    {
+        $this->accountingKey = $accountingKey;
+    }
+
+    /**
      * Sets the client country code
      *
      * @param string $country
@@ -175,6 +202,26 @@ class Client extends GreenInvoice
     public function setCountry(string $country)
     {
         $this->country = $country;
+    }
+
+    /**
+     * Sets the client mobile
+     *
+     * @param string $mobile
+     */
+    public function setMobile(string $mobile)
+    {
+        $this->mobile = $mobile;
+    }
+
+    /**
+     * Sets the client contact person
+     *
+     * @param string $contactPerson
+     */
+    public function setContactPerson(string $contactPerson)
+    {
+        $this->contactPerson = $contactPerson;
     }
 
     /**
@@ -195,6 +242,7 @@ class Client extends GreenInvoice
     public function toArray()
     {
         return array_filter([
+            'id' => $this->id,
             'name' => $this->name,
             'active' => $this->active,
             'department' => $this->department,
