@@ -185,6 +185,294 @@ class Client extends GreenInvoice
     }
 
     /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName(string $name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isActive(): bool
+    {
+        return $this->active;
+    }
+
+    /**
+     * @param bool $active
+     */
+    public function setActive(bool $active)
+    {
+        $this->active = $active;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDepartment(): string
+    {
+        return $this->department;
+    }
+
+    /**
+     * @param string $department
+     */
+    public function setDepartment(string $department)
+    {
+        $this->department = $department;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTaxId(): string
+    {
+        return $this->taxId;
+    }
+
+    /**
+     * @param string $taxId
+     */
+    public function setTaxId(string $taxId)
+    {
+        $this->taxId = $taxId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPaymentTerms(): int
+    {
+        return $this->paymentTerms;
+    }
+
+    /**
+     * @param int $paymentTerms
+     */
+    public function setPaymentTerms(int $paymentTerms)
+    {
+        $this->paymentTerms = $paymentTerms;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBankName(): string
+    {
+        return $this->bankName;
+    }
+
+    /**
+     * @param string $bankName
+     */
+    public function setBankName(string $bankName)
+    {
+        $this->bankName = $bankName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBankBranch(): string
+    {
+        return $this->bankBranch;
+    }
+
+    /**
+     * @param string $bankBranch
+     */
+    public function setBankBranch(string $bankBranch)
+    {
+        $this->bankBranch = $bankBranch;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBankAccount(): string
+    {
+        return $this->bankAccount;
+    }
+
+    /**
+     * @param string $bankAccount
+     */
+    public function setBankAccount(string $bankAccount)
+    {
+        $this->bankAccount = $bankAccount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAddress(): string
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param string $address
+     */
+    public function setAddress(string $address)
+    {
+        $this->address = $address;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCity(): string
+    {
+        return $this->city;
+    }
+
+    /**
+     * @param string $city
+     */
+    public function setCity(string $city)
+    {
+        $this->city = $city;
+    }
+
+    /**
+     * @return string
+     */
+    public function getZip(): string
+    {
+        return $this->zip;
+    }
+
+    /**
+     * @param string $zip
+     */
+    public function setZip(string $zip)
+    {
+        $this->zip = $zip;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCategory(): int
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param int $category
+     */
+    public function setCategory(int $category)
+    {
+        $this->category = $category;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSubCategory(): int
+    {
+        return $this->subCategory;
+    }
+
+    /**
+     * @param int $subCategory
+     */
+    public function setSubCategory(int $subCategory)
+    {
+        $this->subCategory = $subCategory;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPhone(): string
+    {
+        return $this->phone;
+    }
+
+    /**
+     * @param string $phone
+     */
+    public function setPhone(string $phone)
+    {
+        $this->phone = $phone;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFax(): string
+    {
+        return $this->fax;
+    }
+
+    /**
+     * @param string $fax
+     */
+    public function setFax(string $fax)
+    {
+        $this->fax = $fax;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRemarks(): string
+    {
+        return $this->remarks;
+    }
+
+    /**
+     * @param string $remarks
+     */
+    public function setRemarks(string $remarks)
+    {
+        $this->remarks = $remarks;
+    }
+
+    /**
+     * @return array
+     */
+    public function getEmails(): array
+    {
+        return $this->emails;
+    }
+
+    /**
+     * @param array $emails
+     */
+    public function setEmails(array $emails)
+    {
+        $this->emails = $emails;
+    }
+
+    /**
+     * @return array
+     */
+    public function getLabels(): array
+    {
+        return $this->labels;
+    }
+
+    /**
+     * @param array $labels
+     */
+    public function setLabels(array $labels)
+    {
+        $this->labels = $labels;
+    }
+
+    /**
      * Sets the client accounting key
      *
      * @param string $accountingKey
