@@ -15,7 +15,7 @@ class GreenInvoice
      *
      * @var string
      */
-    public static $apiBase = 'https://www.greeninvoice.co.il/api/';
+    public static $apiBase = 'https://api.greeninvoice.co.il/api/';
 
     /**
      * The sandbox URL for the GreenInvoice API.
