@@ -58,21 +58,29 @@ class Token extends GreenInvoice
     {
         $client = new Client();
 
+        $base = match (self::$apiBase) {
+            'https://sandbox.d.greeninvoice.co.il/api/' => 'https://api.sandbox.morning.dev/idp/v1/oauth/token',
+            default => 'https://api.morning.co/idp/v1/oauth/token',
+        };
+
         try {
-            $response = $client->request('POST', self::$apiBase.self::$apiVersion.$this->endpoint, [
+            $response = $client->request('POST', $base, [
                 'headers' => [
                     'Content-Type' => 'application/json',
-                    'X-Authorization-Bearer' => 'JWT',
                 ],
                 'json' => [
-                    'id' => self::$apiKey,
-                    'secret' => self::$secret,
+                    'grant_type' => 'client_credentials',
+                    'client_id' => self::$apiKey,
+                    'client_secret' => self::$secret,
                 ],
             ]);
         } catch (RequestException $e) {
             $response = $e->getResponse();
         }
 
-        return json_decode($response->getBody(), 1);
+        $data = json_decode($response->getBody(), 1);
+        $data['token'] = $data['accessToken'] ?? null;
+
+        return $data;
     }
 }
